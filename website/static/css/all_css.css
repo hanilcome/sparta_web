@@ -1,0 +1,607 @@
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'IM_Hyemin-Bold', 'TTTogether', sans-serif;
+
+}
+
+.main_pic_yj {
+    width: 100%;
+    height: 250px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/logo.PNG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    padding-top: 50px;
+}
+
+.member_title_yj {
+    margin-left: 50px;
+    -webkit-text-stroke: 2px black;
+    color: #FEEBB6;
+}
+
+.member_yj {
+    display: flex;
+    max-width: 100%;
+    min-width: fit-content;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.member_name1_yj {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 100px;
+    border: 3px #E0BFE6;
+    background-image: url("../img/by.PNG");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 160px;
+    background-color: #f0def3;
+    -webkit-text-stroke: 0.5px white;
+}
+
+.member_name2_yj {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 100px;
+    border: 3px #FFFBEB;
+    background-image: url("../img/bg.PNG");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 160px;
+    background-color: #FFFBEB;
+    -webkit-text-stroke: 0.5px white;
+}
+
+.member_name3_yj {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 100px;
+    border: 3px #ECF9FF;
+    background-image: url("../img/jy.PNG");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 160px;
+    background-color: #ECF9FF;
+    -webkit-text-stroke: 0.5px white;
+}
+
+.member_name4_yj {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 100px;
+    border: 3px #FEEBB6;
+    background-image: url("../img/yj.PNG");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 160px;
+    background-color: #FEEBB6;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.member_name5_yj {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 100px;
+    border: 3px #FEEBB6;
+    background-image: url("../img/cj.PNG");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 160px;
+    color: white;
+    background-color: #807d7d;
+    -webkit-text-stroke: 0.5px black;
+}
+
+
+
+.closed_btn1_yj {
+    width: 100px;
+    height: 50px;
+    background-color: #E0BFE6;
+    border-radius: 10px;
+    border: 3px;
+}
+
+.closed_btn2_yj {
+    width: 100px;
+    height: 50px;
+    background-color: #FFFBEB;
+    border-radius: 10px;
+    border: 3px;
+}
+
+.closed_btn3_yj {
+    width: 100px;
+    height: 50px;
+    background-color: #ECF9FF;
+    border-radius: 10px;
+    border: 3px;
+}
+
+.closed_btn4_yj {
+    width: 100px;
+    height: 50px;
+    background-color: #FEEBB6;
+    border-radius: 10px;
+    border: 3px;
+}
+
+.closed_btn5_yj {
+    width: 100px;
+    height: 50px;
+    background-color: #595959;
+    border-radius: 10px;
+    border: 3px;
+    color: white;
+}
+
+.link_img_yj {
+    margin-left: 10px;
+}
+
+/* 
+ /* 가장 겉에 씌우는 div */
+.wrap_bg {
+    background-color: white;
+    width: auto;
+    margin: 0px auto 0px auto;
+}
+
+/* 제목 div */
+.mytitle_bg {
+    float: left;
+    /* background-color: #B39283; */
+    width: 100%;
+    height: 100%;
+    /* border-radius: 10px; */
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    /* margin: auto; */
+    background-size: cover;
+    color: #E0BFE6;
+    -webkit-text-stroke: 2px black;
+}
+
+/* 소제목 div: 안 썼지만 남김.
+.mysmalltitle_bg {
+    float: left;
+    background-color: #F3CF98;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    background-size: cover;
+    color: black;
+}*/
+/* 카드 div: 내용과 이미지를 담음 */
+.mycard_bg {
+    float: left;
+    background-color: #FFFBEB;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    background-size: cover;
+    color: black;
+    padding-top: 10px;
+}
+
+/* 왼쪽 내용 div, 1,2로 나눈 이유는 float을 왼쪽과 오른쪽으로 각각 쏠리게 하고 싶었음. */
+.mydesc1_bg {
+    float: left;
+    background-color: white;
+    width: 47%;
+    height: 60%;
+    border-radius: 10px;
+    text-align: center;
+    display: inline;
+    padding-top: 10px;
+    margin: 0% 0% 2% 2%;
+    color: black;
+}
+
+/* 오른쪽 내용 div */
+.mydesc2_bg {
+    float: right;
+    background-color: white;
+    width: 47%;
+    height: 60%;
+    border-radius: 10px;
+    text-align: center;
+    display: inline;
+    padding-top: 10px;
+    margin: 0% 2% 2% 0%;
+    color: black;
+}
+
+.mainUrlBox_bg {
+    display: block;
+    position: relative;
+    border-radius: 7px;
+    border: 3px solid black;
+    left: 0%;
+    top: 60%;
+    background-color: white;
+    width: 86%;
+    margin: 0px auto 0px auto;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.bd1_by {
+    display: block;
+    margin: 0px auto 20px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 40vh;
+}
+
+.bd2_by {
+    display: block;
+    margin: 0 auto 20px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 40vh;
+}
+
+.review1 {
+    border-radius: 10px;
+    margin: 20px auto 10px 50px;
+    /* padding-left: 20px; */
+    color: #ECF9FF;
+    -webkit-text-stroke: 2px black;
+}
+
+.cardbox_by {
+    margin: 30px auto 0px auto;
+    background-position: center;
+    background-size: cover;
+}
+
+.cardimg_by {
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.line_by {
+    text-decoration-line: none;
+    color: black;
+}
+
+.name_by {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 기호님 템플릿 */
+
+/* 박스 템플릿.
+.exBox_bg{
+    background-color: white;
+    width: 10%;
+    margin: 0px auto 0px auto;
+    padding: 2% 2% 2% 2%;
+}
+*/
+/* 가장 겉:  */
+.box_bg {
+    background-color: white;
+    width: auto;
+    height: auto;
+    margin: 0px auto 0px auto;
+    padding: 2% 2% 2% 2%;
+}
+
+.main_pic_yj>button {
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.game_post_btn_yj {
+    text-align: center;
+}
+
+.game_post_btn_yj>button {
+    width: 300px;
+    height: 100px;
+    justify-content: center;
+    margin: auto;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px #FEEBB6;
+    background-color: #FEEBB6;
+}
+
+.homeBox_bg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 25px auto;
+    background-color: white;
+}
+
+.homeBox_bg>a {
+    margin-right: 10px;
+    border-radius: 7px;
+    border: 3px solid black;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.postBox_bg {
+    position: relative;
+    border-radius: 7px;
+    border: 3px solid black;
+    background-color: white;
+    width: 400px;
+    margin: 0px auto 0px auto;
+    padding-top: 10px;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.nickBox_bg {
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    border-radius: 7px;
+    border: 3px solid black;
+    left: 7%;
+    top: 10%;
+    width: 20%;
+    margin: 50px auto 20px auto;
+    padding: 0% 0% 0% 0%;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.pwBox_bg {
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    border-radius: 7px;
+    border: 3px solid black;
+    left: 10%;
+    top: 10%;
+    width: 20%;
+    margin: 50px auto 20px auto;
+    padding: 0% 0% 0% 0%;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.titleBox_bg {
+    display: block;
+    position: relative;
+    border-radius: 7px;
+    border: 3px solid black;
+    left: 0%;
+    top: 40%;
+    background-color: white;
+    width: 86%;
+    margin: 0px auto 20px auto;
+    padding: 0% 0% 0% 0%;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.contentBox_bg {
+    display: block;
+    position: relative;
+    border-radius: 7px;
+    border: 3px solid black;
+    left: 0%;
+    top: 30%;
+    background-color: white;
+    width: 86%;
+    margin: 0px auto 20px auto;
+    padding: 0% 0% 0% 0%;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.imageBox_bg {
+    display: block;
+    position: relative;
+    border-radius: 7px;
+    border: 3px solid black;
+    left: 0%;
+    top: 60%;
+    background-color: white;
+    width: 86%;
+    margin: 0px auto 20px auto;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.mainUrlBox_bg {
+    display: block;
+    position: relative;
+    border-radius: 7px;
+    border: 3px solid black;
+    left: 0%;
+    top: 60%;
+    background-color: white;
+    width: 86%;
+    margin: 0px auto 0px auto;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.buttonBox_bg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 25px auto;
+    background-color: white;
+}
+
+.buttonBox_bg>button {
+    margin-right: 10px;
+    border-radius: 7px;
+    border: 3px solid black;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+.buttonBox_bg>a {
+    margin-right: 10px;
+    border-radius: 7px;
+    border: 3px solid black;
+    box-shadow: 1px 3px 10px 1px rgba(163, 174, 184, 0.7);
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+.divider_cj {
+    margin: 5rem 0;
+}
+
+.container_cj {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.textbox_cj {
+    word-break: keep-all;
+    max-width: 550px;
+
+    margin: auto;
+}
+
+/* .textbox_cj > h2 {
+    font-size: 5rem;
+    font-weight: ;
+} */
+
+.nickname_cj {
+    display: block;
+    float: right;
+    font-size: 24px;
+    margin-left: 550px;
+    margin-bottom: 20px;
+}
+
+.txt_cj {
+    margin-top: 40px;
+    font-size: 1.3rem;
+}
+
+.circle_cj {
+
+
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.img_cj {
+    margin: 25px;
+
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 3%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonbox_cj {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.buttonbox_cj_right {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+@media (max-width: 1450px) {
+
+    body {
+        margin: auto;
+    }
+
+    .container_cj {
+        display: block;
+        margin: 25px;
+        align-items: center;
+    }
+
+    .textbox_cj {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .buttonbox_cj {
+        margin-top: 50px;
+    }
+
+}
+
+#gpbox_cj {
+    display: none;
+}

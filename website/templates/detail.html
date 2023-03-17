@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}Laugh out Loud{% endblock %}
+
+
+<!-- contents -->
+{% block contents %}
+
+
+
+<!-- Gamepost 생성 영역 -->
+<div class="main_pic_yj">
+    <button onclick="location.href='/'"></button>
+</div>
+<div class="game_post_btn_yj">
+    <button onclick="open_gpbox()" style="font-size: 35px;"> Game Post 생성 </button>
+</div>
+<div class="box_bg">
+    <div class="homeBox_bg">
+
+    </div>
+    <!-- <div class="postBox_bg">
+        <h2 align="center">Game Post 생성</h2>
+    </div> -->
+    <div id="gpbox_cj">
+        <div class="postBox_bg">
+            <h3 align="center"> 좋아하는 게임을 추가해 주세요! </h3>
+        </div>
+        <div class="nickBox_bg">
+            <div class="form-floating">
+                <input name="nickname" type="text" class="form-control" id="post_nickname" placeholder="여기에 닉네임을 적어주세요"
+                    style="background-color: white" autocomplete="off" autofocus>
+                <label for="nickname">Nickname</label>
+            </div>
+        </div>
+        <div class="pwBox_bg">
+            <div class="form-floating">
+                <input name="password" type="text" class="form-control" id="post_password" placeholder="여기에 비밀번호를 적어주세요"
+                    style="background-color: white" autocomplete="off" autofocus>
+                <label for="nickname">Password</label>
+            </div>
+        </div>
+        <div class="titleBox_bg">
+            <div class="form-floating">
+                <input name="title" type="text" class="form-control" id="post_title" placeholder="여기에 제목을 적어주세요"
+                    style="background-color: white" autocomplete="off" autofocus>
+                <label for="title">Title</label>
+            </div>
+        </div>
+        <div class="contentBox_bg">
+            <div class="form-floating">
+                <textarea name="content" rows="25" class="form-control" id="post_content"
+                    style="height: 60%; background-color: white;" autocomplete="off" autofocus
+                    placeholder="내용은 1000자 이내로 작성해주세요."></textarea>
+                <label for="content">Content (1000자 이내로 작성해주세요.)</label>
+            </div>
+        </div>
+        <div class="imageBox_bg">
+            <div class="form-floating">
+                <input name="image_url" type="text" class="form-control" id="post_image_url"
+                    placeholder="여기에 Image_URL을 적어주세요" style="background-color: white">
+                <label for="image_url">Image_URL (권장 사이즈: 500*500)</label>
+            </div>
+        </div>
+        <div class="mainUrlBox_bg">
+            <div class="form-floating">
+                <input name="main_url" type="text" class="form-control" id="post_main_url"
+                    placeholder="여기에 Main_URL을 적어주세요" style="background-color: white">
+                <label for="image_url">MAIN_URL</label>
+            </div>
+        </div>
+        <div class="buttonBox_bg">
+            <button type="button" class="btn btn-warning" style="left: 30%" onclick="save_post()">저장</button>
+            <button onclick="close_gpbox()" type="button" class="btn btn-primary"
+                style="left: 30%; background-color: #FEEBB6; color: black;">Game Post 닫기</button>
+        </div>
+
+    </div>
+</div>
+<br>
+<hr class="divider_cj">
+<br>
+{% for post in posts %}
+{% if post.count%2 == 1 %}
+<div class="container_cj">
+    <div>
+        <div class="circle_cj" style="background-color:{{post.color}}; border: 4px solid {{post.color}};
+        box-shadow: inset 0 0 8px {{post.color}};">
+            <div>
+                <img class="img_cj" src="{{ post.image_url }}">
+            </div>
+        </div>
+    </div>
+    <div class="textbox_cj">
+        <a class="line_by" href="{{post.main_url}}">
+            <h2 style="font-size: 3.8rem">{{post.post_title}} <span style="font-size: 20px;"> »</span></h2>
+        </a>
+        <div class="nickname_cj"><span class="badge rounded-pill text-bg-warning">{{ post.nickname }}</span></div>
+        <p class="txt_cj">{{ post.content }}</p>
+    </div>
+    <div class="buttonbox_cj_right">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <div>
+                <input class="input_pw_cj" type="password" placeholder="비밀번호를 입력하세요."
+                    style="width:200px; height:38px; margin-right: 3px;" id="check_password_{{post.post_id}}">
+                <button onclick="check_pw('{{ post.post_id }}')" type="button" class="btn btn-secondary"
+                    style="margin-bottom: 5px;">수정
+                </button>
+                <button onclick="del_post('{{ post.post_id }}')" type="button" class="btn btn-secondary"
+                    style="margin-bottom: 5px; background-color: #FA8072;">삭제
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr class="divider_cj">
+<br>
+{% endif %}
+
+{% if post.count%2 == 0 %}
+<div class="container_cj">
+    <div class="textbox_cj">
+        <a class="line_by" href="{{post.main_url}}">
+            <h2 style="font-size: 3.8rem">{{post.post_title}} <span style="font-size: 20px;"> »</span></h2>
+        </a>
+        <div class="nickname_cj"><span class="badge rounded-pill text-bg-warning">{{ post.nickname }}</span></div>
+        <p class="txt_cj">{{ post.content }}</p>
+    </div>
+    <div>
+        <div class="circle_cj" style="background-color:{{post.color}}; border: 4px solid {{post.color}};
+        box-shadow: inset 0 0 8px {{post.color}};">
+            <div class>
+                <img class="img_cj" src="{{ post.image_url }}">
+            </div>
+        </div>
+    </div>
+    <div class="buttonbox_cj">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <div>
+                <input class="input_pw_cj" type="password" placeholder="비밀번호를 입력하세요."
+                    style="width:200px; height:38px; margin-right: 3px;" id="check_password_{{post.post_id}}">
+                <button onclick="check_pw('{{ post.post_id }}')" type="button" class="btn btn-secondary"
+                    style="margin-bottom: 5px;">수정
+                </button>
+                <button onclick="del_post('{{ post.post_id }}')" type="button" class="btn btn-secondary"
+                    style="margin-bottom: 5px; background-color: #FA8072;">삭제
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<hr class="divider_cj">
+<br>
+{% endif %}
+
+{% endfor %}
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}여기에 title{% endblock %}
+
+
+<!-- contents -->
+{% block contents %}
+
+<div class="box_bg">
+    <div class="postBox_bg">
+        <h2 align="center">Game Post 수정</h2>
+    </div>
+    <fieldset disabled="disabled">
+        <div class="nickBox_bg">
+            <div class="form-floating">
+                <input name="nickname" type="text" class="form-control" id="post_nickname" placeholder="여기에 닉네임을 적어주세요"
+                    style="background-color: #D3D3D3" autocomplete="off" autofocus>
+                <label for="nickname">{{post.nickname}}</label>
+            </div>
+        </div>
+        <div class="pwBox_bg">
+            <div class="form-floating">
+                <input name="password" type="password" class="form-control" id="post_password"
+                    placeholder="여기에 비밀번호를 적어주세요" style="background-color: #D3D3D3" autocomplete="off" autofocus>
+                <label for="nickname">Password</label>
+            </div>
+        </div>
+    </fieldset>
+    <div class="titleBox_bg">
+        <div class="form-floating">
+            <input name="title" type="text" class="form-control" id="post_title" placeholder="여기에 제목을 적어주세요"
+                style="background-color: white" autocomplete="off" autofocus>
+            <label for="title">{{post.post_title}}</label>
+        </div>
+    </div>
+    <div class="contentBox_bg">
+        <div class="form-floating">
+            <textarea name="content" rows="25" class="form-control" id="post_content"
+                style="height: 60%; background-color: white;" autocomplete="off" autofocus
+                placeholder="여기에 내용을 적어주세요"></textarea>
+            <label for="content">{{post.content}}</label>
+        </div>
+    </div>
+    <div class="imageBox_bg">
+        <div class="form-floating">
+            <input name="image_url" type="text" class="form-control" id="post_image_url"
+                placeholder="여기에 Image_URL을 적어주세요" style="background-color: white">
+            <label for="image_url">{{post.image_url}}</label>
+        </div>
+    </div>
+    <div class="mainUrlBox_bg">
+        <div class="form-floating">
+            <input name="main_url" type="text" class="form-control" id="post_main_url" placeholder="여기에 Main_URL을 적어주세요"
+                style="background-color: white">
+            <label for="image_url">{{post.main_url}}</label>
+        </div>
+    </div>
+    <div class="buttonBox_bg">
+        <a type="button" class="btn btn-primary" style="left: 30%" onclick="update_post('{{post.post_id}}')" href="/detail">저장</a>
+        <!-- <button type="button" class="btn btn-primary" style="left: 30%"
+            onclick="update_post('{{post.post_id}}')">저장</button> -->
+
+        <a type="button" class="btn btn-primary" style="left: 30%" href="/detail">취소</a>
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}
